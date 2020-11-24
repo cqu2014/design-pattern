@@ -1,0 +1,31 @@
+*.class
+.classpath
+.project
+*.iml
+.settings/
+.metadata/
+Servers/
+.idea/
+.idea/httpRequests/*.json
+.idea/httpRequests/http-requests-log.http
+.gradle/
+
+log/
+target/
+# gradle/
+/**/build/
+/**/out/
+
+# Package Files #
+# *.jar
+*.war
+*.ear
+*.log
+# *.txt
+*.bat
+*.csv
+# other
+mybatis-gen.xml
+#logback.xml
+rebel.xml
+/gradle/
