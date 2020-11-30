@@ -17,6 +17,30 @@ public class SonTest {
 
       father = new Father("孙悟空");
       // throw java.lang.ClassCastException
-      son = (Son) father;
+      //son = (Son) father;
+  }
+
+  @Test
+  public void tryCatch(){
+    System.out.println(getValue());
+  }
+
+  private Father getValue(){
+      Father father = new Father("out-try-catch");
+      int value = 0;
+      try{
+          value++;
+          father.setName("in-try");
+          value = value /0;
+          return father;
+      } catch (Exception exception){
+            value++ ;
+            father.setName("in-catch");
+            return father;
+      } finally{
+          value++ ;
+          father.setName("in-finally");
+        System.out.println("finally " + value);
+      }
   }
 }
