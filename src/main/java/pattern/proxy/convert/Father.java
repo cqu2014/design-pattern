@@ -16,6 +16,12 @@ public class Father {
     private String name;
 
     public void say(){
-    System.out.println("father says something");
+        addVoice(100);
+        System.out.println("father says something");
+    }
+
+    private String addVoice(int power){
+        System.out.println("input power is: " + power);
+        return "OK";
     }
 }

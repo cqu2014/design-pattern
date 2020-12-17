@@ -2,16 +2,16 @@ package pattern.proxy.convert;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class SonTest {
 
   @Test
   public void say() {
       Father father = new Son("孙悟空");
-      father.say();
+      System.out.println("**************father引用son调被覆盖的接口************");
+      father.say(); // Son sing a song
       //father.say("齐天大圣");无法调用
       Son son = (Son) father;
+      System.out.println("**************强转father引用son调被覆盖的接口************");
       son.say();
       son.say("齐天大圣");
 

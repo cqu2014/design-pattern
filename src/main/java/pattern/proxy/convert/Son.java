@@ -17,10 +17,6 @@ public class Son extends Father {
         super(name);
     }
 
-    @Override
-    public void say() {
-        System.out.println("Son sing a song");
-    }
 
     public void say(String song) {
         System.out.println("Son sing a song: " + song);
