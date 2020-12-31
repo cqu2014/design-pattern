@@ -1,11 +1,13 @@
 package pattern.observe;
 
+import cn.hutool.core.util.IdUtil;
 import org.junit.Before;
 import org.junit.Test;
 import pattern.observe.event.CustomEvent;
 import pattern.observe.listener.EventListenerChina;
 import pattern.observe.listener.EventListenerRussia;
 
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 public class EventBusUtilTest {
@@ -38,5 +40,11 @@ public class EventBusUtilTest {
       } catch (InterruptedException e) {
           e.printStackTrace();
       }
+  }
+
+  @Test
+  public void uuid(){
+    System.out.println(UUID.randomUUID());
+    System.out.println(IdUtil.simpleUUID());
   }
 }
