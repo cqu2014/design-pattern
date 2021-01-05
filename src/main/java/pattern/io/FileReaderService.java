@@ -37,7 +37,8 @@ public class FileReaderService {
               bufferedWriter.newLine();
               System.out.println(line);
           }
-
+          // 只有调用flush或者close方法才会触发收尾
+          bufferedWriter.flush();
       } catch (IOException e) {
           e.printStackTrace();
       }finally{
