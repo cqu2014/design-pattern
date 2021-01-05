@@ -33,7 +33,8 @@ public class FileReaderService {
           String line;
           while ((line = bufferedReader.readLine()) != null){
               bufferedWriter.write(line);
-              bufferedWriter.write("\n");
+              // bufferedWriter.write("\n");
+              bufferedWriter.newLine();
               System.out.println(line);
           }
 

@@ -20,7 +20,7 @@ public class FileService {
       System.exit(0);
   }
     /**
-     * 读取并写入字符流
+     * 使用默认字符集 按字符流操作文件
      *
      * @param source
      * @param dest
