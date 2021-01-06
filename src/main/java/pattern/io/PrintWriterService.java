@@ -23,10 +23,10 @@ public class PrintWriterService {
     private static void println(String inputPath,String outputPath){
         try(
                 BufferedReader bufferedWriter = new BufferedReader(new FileReader(inputPath));
-                // PrintWriter重定向到文件
-                PrintWriter printWriter =new PrintWriter(new FileWriter(outputPath))) {
+                PrintWriter printWriter = new PrintWriter(new FileWriter(outputPath))) {
             String line;
             while ((line = bufferedWriter.readLine()) != null){
+                // 支持格式化输出
                 printWriter.println(line);
             }
             printWriter.flush();
