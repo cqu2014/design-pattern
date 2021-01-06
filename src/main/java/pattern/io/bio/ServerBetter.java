@@ -1,9 +1,8 @@
 package pattern.io.bio;
 
-import java.io.*;
+import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -13,7 +12,7 @@ import java.util.Objects;
  * @date Create at 2021/1/6
  * @since
  */
-public class ServerBetter {
+public final class ServerBetter {
     /**
      * 默认端口号
      */
@@ -59,37 +58,4 @@ public class ServerBetter {
             System.out.println("服务器已关闭!");
         }
     }
-
-  private static class ServerHandler implements Runnable {
-        private Socket socket;
-        public ServerHandler(Socket socket) {
-            this.socket = socket;
-        }
-
-      @Override
-      public void run() {
-          try(
-                  BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                  PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()),true);
-                  ){
-                String expression;
-                String result;
-                while ((expression = bufferedReader.readLine()) != null){
-                    System.out.println("服务器收到消息：" + expression + "当前线程名称：" + Thread.currentThread().getName());
-                    String[] strings = expression.split(" ");
-                    result = Arrays.toString(strings);
-                    printWriter.println(result);
-                }
-          } catch (IOException e) {
-              e.printStackTrace();
-          } finally {
-              try {
-                  socket.close();
-              } catch (IOException e) {
-                  e.printStackTrace();
-              }
-              socket = null;
-          }
-      }
-  }
 }
