@@ -1,7 +1,7 @@
 package pattern.io.file;
 
 import lombok.Data;
-import pattern.ConstData;
+import pattern.constdata.ConstData;
 
 import java.io.File;
 import java.util.Iterator;

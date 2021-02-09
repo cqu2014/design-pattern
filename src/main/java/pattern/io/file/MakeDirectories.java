@@ -1,6 +1,6 @@
 package pattern.io.file;
 
-import pattern.ConstData;
+import pattern.constdata.ConstData;
 
 import java.io.File;
 
@@ -25,7 +25,7 @@ public class MakeDirectories {
 
     private static void fileData(File f){
         System.out.println(
-                "Absolute path: " + f.getAbsolutePath()
+                " Absolute path: " + f.getAbsolutePath()
                 + "\n Can read: " + f.canRead()
                 + "\n Can write: " + f.canWrite()
                 + "\n getName: " + f.getName()
