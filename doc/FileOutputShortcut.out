@@ -1,0 +1,29 @@
+1: package pattern.io.file.thinking;
+2: 
+3: import pattern.constdata.ConstData;
+4: 
+5: import java.io.*;
+6: 
+7: /**
+8:  * @author Oliver Wang
+9:  * @description
+10:  * @created by IntelliJ IDEA 2020.02
+11:  * @date Create at 2021/2/9
+12:  * @since
+13:  */
+14: public class FileOutputShortcut {
+15:   public static void main(String[] args) throws IOException {
+16:       String filename = ConstData.DOC_PATH.concat("FileOutputShortcut.out");
+17:       BufferedReader bufferedReader = new BufferedReader(new StringReader(BufferedInputFile.read(ConstData.FILE_NAME.concat("FileOutputShortcut.java"))));
+18:       // Here's shortcut
+19:       PrintWriter out = new PrintWriter(filename);
+20:       int lineCount = 1;
+21:       String s;
+22:       while ((s = bufferedReader.readLine()) != null){
+23:           out.println(lineCount++ + ": " + s);
+24:       }
+25:       bufferedReader.close();
+26:       out.close();
+27:       System.out.println(BufferedInputFile.read(filename));
+28:   }
+29: }
