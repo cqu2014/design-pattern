@@ -1,0 +1,1 @@
+Some text Disconnected from the target VM, address: '127.0.0.1:51676', transport: 'socket' some more Connected to the VM started by ':ChannelBuilder.main()' (localhost:51693). Open the debugger session tab
