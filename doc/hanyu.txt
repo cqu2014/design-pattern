@@ -1,0 +1,2 @@
+Charset charset = Charset.forName("GBK");//Java.nio.charset.Charset处理了字符转换问题
+它通过构造CharsetEncoder和CharsetDecoder将字符序列转换成字节和逆转换。
